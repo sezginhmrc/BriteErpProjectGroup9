@@ -1,4 +1,4 @@
-package com.group9.packages;
+package com.group9.pages;
 
 import com.group9.utilities.Driver;
 import org.openqa.selenium.WebDriver;

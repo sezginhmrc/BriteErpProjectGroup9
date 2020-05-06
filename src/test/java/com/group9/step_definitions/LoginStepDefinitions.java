@@ -1,6 +1,6 @@
 package com.group9.step_definitions;
 
-import com.group9.packages.LoginPage;
+import com.group9.pages.LoginPage;
 import com.group9.utilities.BrowserUtilities;
 import com.group9.utilities.ConfigurationReader;
 import com.group9.utilities.Driver;
@@ -12,8 +12,8 @@ import org.junit.Assert;
 public class LoginStepDefinitions {
     LoginPage loginPage=new LoginPage();
 
-    @Given("user is on the login page")
-    public void user_is_on_the_login_page() {
+    @Given("User is on the login page")
+    public void User_is_on_the_login_page() {
         System.out.println("Open login page");
         String URL = ConfigurationReader.getProperty("url");
         Driver.getDriver().get(URL);
