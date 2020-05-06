@@ -5,7 +5,8 @@ import java.util.Properties;
 
 public class ConfigurationReader {
     private static Properties configFile;
-
+    // to read configuration.properties file
+    // static block will be executed all the times.
     static {
         try {
             //location of properties file
