@@ -14,8 +14,8 @@ public class LoginStepDefinitions {
 
     LoginPage loginPage = new LoginPage();
 
-    @Given("user is on the login page")
-    public void user_is_on_the_login_page() {
+    @Given("User is on the login page")
+    public void User_is_on_the_login_page() {
         System.out.println("Open login page");
         String URL = ConfigurationReader.getProperty("url");
         System.out.println("URl : " + URL);
