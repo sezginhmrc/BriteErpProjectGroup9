@@ -3,7 +3,7 @@
 
 
     Background: open login page
-      Given user is on the login page
+      Given User is on the login page
 
     @salesmanager
     Scenario:Login with valid username and password
