@@ -28,6 +28,13 @@ public class LoginStepDefinitions {
         System.out.println("Login as sales manager");
         loginPage.login();
     }
+    @When("user logs in as a event manager")
+    public void user_logs_in_as_a_event_manager() {
+        System.out.println("Login as event manager");
+        loginPage.login();
+
+}
+
 
     @When("User enters {string} username and {string} password")
     public void User_enters_username_and_password(String string, String string2) {

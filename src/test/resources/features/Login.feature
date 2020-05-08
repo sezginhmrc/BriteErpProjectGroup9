@@ -15,6 +15,12 @@
       When User enters "expensesmanager50@info.com" username and "expensesmanager" password
       Then User should verify that title is a "#Inbox - Odoo"
 
+      @eventmanager
+
+      Scenario:Login with valid username and password
+        When User enters "eventscrmmanager44@info.com" username and "eventscrmmanager" password
+        Then User should verify that title is a "#Inbox - Odoo"
+
 
     @negative_scenario
     Scenario:Login with invalid username and password
@@ -38,4 +44,5 @@
         |expensesmanager52@info.com  | expensesmanager |
         |expensesmanager53@info.com  | expensesmanager |
         |expensesmanager54@info.com  | expensesmanager |
+        |eventscrmmanager44@info.com | eventscrmmanager|
 

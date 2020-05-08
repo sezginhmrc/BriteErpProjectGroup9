@@ -52,9 +52,12 @@ public class LoginPage extends BasePage {
         if(role.equalsIgnoreCase("sales manager")){
             userName="salesmanager40@info.com";
             password="salesmanager";
-        }else if(role.equalsIgnoreCase("expenses manager")){
-            userName="expensesmanager50@info.com";
-            password="expensesmanager";
+        }else if(role.equalsIgnoreCase("expenses manager")) {
+            userName = "expensesmanager50@info.com";
+            password = "expensesmanager";
+        }else if(role.equalsIgnoreCase("event manager")) {
+            userName = "eventscrmmanager44@info.com";
+            password = "eventscrmmanager";
         } else {
             throw new RuntimeException("invalid role!");
         }
