@@ -1,33 +1,30 @@
 package com.group9.step_definitions;
 
 import com.group9.utilities.Driver;
+import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-public class Hook {
-    @Before(order = 2)
-    public  void  setup(){
-        System.out.println("Test setup");
-        Driver.getDriver().manage().window().maximize();
-    }
-    @Before(value = "@driver",order = 1)
-    public void specialSetup(){
-        System.out.println("Setup for driver only");
-    }
+public class Hooks {
 
-    @After("@driver")
-    public void specialTeardown(){
-        System.out.println("Teardown for driver only");
+    @Before
+    public void setup(){
+        System.out.println("Test setup");
+        //Driver.getDriver().manage().window().maximize();
+        Driver.getDriver();
+
     }
 
     @After
-    public void tearDown(Scenario scenario) {
+    public void tearDown(Scenario scenario){
+        //Scenario class that is helping us to attach screenshot to the report
         //how to check if scenario failed
         if (scenario.isFailed()) {
-            System.out.println("Test failed!");
+            //TakeScreenSHot interface comes from Selenium WebDriver
+            //output is in Bytes
+            //method that attaches image to the report requires array of Bytes (.embed () method)
             TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
             byte[] image = takesScreenshot.getScreenshotAs(OutputType.BYTES);
             //attach screenshot to the report
@@ -36,5 +33,4 @@ public class Hook {
         System.out.println("Test clean up");
         Driver.closeDriver();
     }
-
 }
