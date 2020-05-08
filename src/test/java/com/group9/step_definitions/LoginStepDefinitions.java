@@ -20,7 +20,6 @@ public class LoginStepDefinitions {
         String URL = ConfigurationReader.getProperty("url");
         System.out.println("URl : " + URL);
         Driver.getDriver().get(URL);
-
     }
 
     @When("user logs in as a sales manager")

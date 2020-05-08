@@ -3,7 +3,7 @@ Feature: Adding price lists as Scenario Outline
 
   Scenario Outline: Create pricelists and verify that they are displayed
 
-    Given user is on the login page
+    Given User is on the login page
     When user logs in as a sales manager
     And navigates to "<module>" module
     Then user clicks on pricelists

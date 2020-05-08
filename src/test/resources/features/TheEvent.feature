@@ -3,7 +3,7 @@
 
     Scenario Outline: Create and post the event
 
-      Given user is on the login page
+      Given User is on the login page
       When user logs in as a event manager
       And navigates to "<module>" module
       Then user clicks on events

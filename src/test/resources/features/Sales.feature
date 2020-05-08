@@ -3,14 +3,14 @@ Feature: Sales page verification
 
   Scenario: User verify that Quotations table has these headers Quotation number, Quotation Date, Customer, Salesperson, Total, Status
 
-    Given user is on the login page
+    Given User is on the login page
     When user logs in as a sales manager
     And navigates to Sales module
     Then user verify that table has this headers Quotation number, Quotation Date, Customer, Salesperson, Total, Status
 
   Scenario: User verify that after select all quotations checkbox, all quotations should be selected
 
-    Given user is on the login page
+    Given User is on the login page
     When user logs in as a sales manager
     And navigates to Sales module
     Then user clicks on checkbox on the header
@@ -18,7 +18,7 @@ Feature: Sales page verification
 
   Scenario: User verify that after one quotation selected, print and action options should be displayed
 
-    Given user is on the login page
+    Given User is on the login page
     When user logs in as a sales manager
     And navigates to Sales module
     Then user clicks on checkbox on the header
