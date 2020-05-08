@@ -1,10 +1,13 @@
 package com.group9.pages;
 
 import com.group9.utilities.BrowserUtilities;
+import com.group9.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 public class SalesPage extends BasePage{
 
@@ -22,6 +25,15 @@ public class SalesPage extends BasePage{
 
     @FindBy (xpath = "//button[@accesskey='s']")
     private WebElement saveButton;
+
+    @FindBy(xpath = "//th//input[@type='checkbox']")
+    private WebElement selectAllChckBox;
+
+    @FindBy(xpath = "(//button[@class='o_dropdown_toggler_btn btn btn-sm dropdown-toggle'])[1]")
+    private WebElement printOption;
+
+    @FindBy(xpath = "(//button[@class='o_dropdown_toggler_btn btn btn-sm dropdown-toggle'])[2]")
+    private WebElement actionOption;
 
 
     public void clickOnPriceList(){
@@ -55,6 +67,24 @@ public class SalesPage extends BasePage{
     public String getCurrentPricelistName(String nameProvidedByUs){
         WebElement priceListName = driver.findElement(By.xpath("//table//td[contains(text(),'"+ nameProvidedByUs +"')]"));
         return priceListName.getText();
+    }
+
+    public List<String> getTableHeaders(){
+        List<WebElement> headerElements= Driver.getDriver().findElements(By.xpath("//th[@class='o_list_record_selector']//following-sibling::th"));
+        return BrowserUtilities.getTextFromWebElements(headerElements);
+    }
+
+    public void clickSelectAllCheckbox(){
+        BrowserUtilities.waitForPageToLoad(10);
+        selectAllChckBox.click();
+    }
+
+    public WebElement getPrintOption(){
+        return printOption;
+    }
+
+    public WebElement getActionOption(){
+        return actionOption;
     }
 
 }
