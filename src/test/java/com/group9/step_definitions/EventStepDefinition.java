@@ -8,10 +8,10 @@ public class EventStepDefinition {
 
     EventPage eventPage = new EventPage();
 
-    @When("navigates to {string} module")
-    public void navigates_to_module(String module) {
-        eventPage.navigateTo(module);
-    }
+//    @When("navigates to {string} module")
+//    public void navigates_to_module(String module) {
+//        eventPage.navigateTo(module);
+//    }
 
     @Then("user clicks on events")
     public void user_clicks_on_event() {

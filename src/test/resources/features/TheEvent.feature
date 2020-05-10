@@ -7,6 +7,7 @@
       When user logs in as a event manager
       And navigates to "<module>" module
       Then user clicks on events
+      # above should be user clicks on CREATE . I think you do not have location for create button..it cannot go enter below info
       And user provides "<Event Name>", "<Location>", "<Start Date>", "<End Date>", and "<Minimum Attendees>" and clicks on confirm event
 
       Examples:

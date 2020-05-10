@@ -1,6 +1,8 @@
 package com.group9.step_definitions;
 
+import com.group9.pages.EventPage;
 import com.group9.pages.SalesPage;
+import com.group9.utilities.BrowserUtilities;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -13,6 +15,7 @@ public class PricelistsStepDefinitions {
 
     @When("navigates to {string} module")
     public void navigates_to_module(String module) {
+        BrowserUtilities.waitForPageToLoad(10);
         salesPage.navigateTo(module);
     }
 

@@ -31,7 +31,8 @@ public abstract class BasePage {
         BrowserUtilities.wait(4);
         actions.moveToElement(moduleElement).
                 pause(2000).
-                click().build().perform();
+                click().
+                build().perform();
 
         BrowserUtilities.wait(5);
     }
