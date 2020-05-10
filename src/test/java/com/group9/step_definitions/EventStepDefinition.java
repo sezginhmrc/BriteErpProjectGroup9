@@ -18,11 +18,10 @@ public class EventStepDefinition {
         eventPage.pleaseClickEvents();
     }
 
-    @Then("user provides {string}, {string}, {string}, {string}, and {string} and clicks on confirm event")
-    public void user_types_event_info(String eventName, String location, String date, String endDate, String minimumAttendees) {
+    @Then("user provides {string}, {string}, {string}, and {string} and clicks on confirm event")
+    public void user_types_event_info(String eventName, String date, String endDate, String minimumAttendees) {
         eventPage.pleaseClickButton();
         eventPage.whatIsIt(eventName);
-        eventPage.whereIsIt(location);
         eventPage.whenIsIt(date);
         eventPage.whenIsItEnding(endDate);
         eventPage.attending(minimumAttendees);
