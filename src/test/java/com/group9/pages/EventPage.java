@@ -16,16 +16,16 @@ public class EventPage extends BasePage {
     @FindBy(name = "name")
     private WebElement eventTitle;
 
-    @FindBy(id = "o_field_input_174")
+    @FindBy(xpath = "//input[@class ='o_input ui-autocomplete-input']")
     private WebElement location;
 
-    @FindBy(name = "date_begin")
+    @FindBy(xpath = "//input [@class='o_datepicker_input o_input']" )
     private WebElement startDate;
 
-    @FindBy(name = "date_end")
+    @FindBy(xpath = "//input [@class='o_datepicker_input o_input']")
     private WebElement endDate;
 
-    @FindBy(name = "seats_min")
+    @FindBy(xpath = "//input [@class='o_field_integer o_field_number o_field_widget o_input']")
     private WebElement minAttendees;
 
     @FindBy(xpath = "//button[@class='btn btn-sm btn-default oe_highlight']")
@@ -33,22 +33,18 @@ public class EventPage extends BasePage {
 
     public void pleaseClickEvents() {
         wait.until(ExpectedConditions.elementToBeClickable(eventsButton)).click();
-        BrowserUtilities.wait(20);
+        BrowserUtilities.wait(5);
     }
 
     public void pleaseClickButton() {
-        BrowserUtilities.waitForPageToLoad(20);
+        BrowserUtilities.waitForPageToLoad(5);
         wait.until(ExpectedConditions.elementToBeClickable(createButton)).click();
     }
     public void whatIsIt(String titleValue) {
-        BrowserUtilities.waitForPageToLoad(20);
+        BrowserUtilities.waitForPageToLoad(5);
         wait.until(ExpectedConditions.elementToBeClickable(eventTitle)).sendKeys(titleValue);
     }
 
-    public void whereIsIt(String locationValue) {
-        BrowserUtilities.waitForPageToLoad(20);
-        wait.until(ExpectedConditions.elementToBeClickable(location)).sendKeys(locationValue);
-    }
 
     public void whenIsIt(String startValue) {
         BrowserUtilities.waitForPageToLoad(20);
