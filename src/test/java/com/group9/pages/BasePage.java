@@ -35,4 +35,6 @@ public abstract class BasePage {
 
         BrowserUtilities.wait(5);
     }
+
+
 }

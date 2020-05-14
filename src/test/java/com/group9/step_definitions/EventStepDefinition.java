@@ -13,6 +13,7 @@ public class EventStepDefinition {
         eventPage.navigateTo(module);
     }
 
+
     @Then("user clicks on events")
     public void user_clicks_on_event() {
         eventPage.pleaseClickEvents();

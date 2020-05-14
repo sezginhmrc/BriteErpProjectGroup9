@@ -11,10 +11,10 @@ public class PricelistsStepDefinitions {
 
     SalesPage salesPage = new SalesPage();
 
-    @When("navigates to {string} module")
+    /*@When("navigates to {string} module")
     public void navigates_to_module(String module) {
         salesPage.navigateTo(module);
-    }
+    }*/
 
     @Then("user clicks on pricelists")
     public void user_clicks_on_pricelists() {

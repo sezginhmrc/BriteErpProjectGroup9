@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = "com/group9/step_definitions",
         features = "src/test/resources/features",
         dryRun =false,
-        tags="@create",
+        tags="@Calendar_Feature",
         plugin = {
                 "html:target/-default-report",
                 "json:target/cucumber1.json"
