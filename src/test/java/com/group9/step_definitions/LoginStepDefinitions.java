@@ -30,7 +30,7 @@ public class LoginStepDefinitions {
     @When("user logs in as a event manager")
     public void user_logs_in_as_a_event_manager() {
         System.out.println("Login as event manager");
-        loginPage.login();
+        loginPage.login("eventscrmmanager44@info.com","eventscrmmanager");
 
 }
 
